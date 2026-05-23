@@ -10,21 +10,21 @@ keep_vars = true
 # 启用 D1 数据库
 [[d1_databases]]
 binding = "DB"
-database_name = "${D1_DATABASE_NAME}"
-database_id = "${D1_DATABASE_ID}"
+database_name = "${email}"
+database_id = "${b1fd93da-4a38-4b57-99d5-96d5c436978e}"
 # fix: 将迁移目录直接配置在这里，这是 D1 自动迁移的标准做法
 migrations_dir = "worker/drizzle"
 
 # 定义环境变量和密钥
 [vars]
-EMAIL_DOMAIN = "${EMAIL_DOMAIN}"
+EMAIL_DOMAIN = "${lizhuoxuan.dpdns.org}"
 TURNSTILE_KEY = "${TURNSTILE_KEY}"
-COOKIES_SECRET = "${COOKIES_SECRET}"
+COOKIES_SECRET = "${b1fd93da4a384b5799d596d5c436978e1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d}"
 TURNSTILE_SECRET = "${TURNSTILE_SECRET}"
-PASSWORD = "${PASSWORD}"
-API_RATE_LIMIT_PER_MINUTE = "${API_RATE_LIMIT_PER_MINUTE}"
-SHOW_AFF = "${SHOW_AFF}"
-ENABLE_OPENAPI = "${ENABLE_OPENAPI}"
+PASSWORD = "${5201314Lzx@.}"
+API_RATE_LIMIT_PER_MINUTE = "${60}"
+SHOW_AFF = "${false}"
+ENABLE_OPENAPI = "${false}"
 
 # 配置邮件处理
 [triggers]
