@@ -17,10 +17,10 @@ migrations_dir = "worker/drizzle"
 
 # 定义环境变量和密钥
 [vars]
-EMAIL_DOMAIN = "${lizhuoxuan.dpdns.org}"
-TURNSTILE_KEY = "${TURNSTILE_KEY}"
+EMAIL_DOMAIN = "${mail.lizhuoxuan.dpdns.org}"
+TURNSTILE_KEY = "${}"
 COOKIES_SECRET = "${b1fd93da4a384b5799d596d5c436978e1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d}"
-TURNSTILE_SECRET = "${TURNSTILE_SECRET}"
+TURNSTILE_SECRET = "${}"
 PASSWORD = "${5201314Lzx@.}"
 API_RATE_LIMIT_PER_MINUTE = "${60}"
 SHOW_AFF = "${false}"
