@@ -7,34 +7,34 @@ compatibility_flags = [ "nodejs_compat" ]
 compatibility_date = "2025-03-01"
 keep_vars = true
 
-# 启用 D1 数据库
+# 启用 D1数据库【已修复】
 [[d1_databases]]
 binding = "DB"
-database_name = "$email"
-database_id = "${b1fd93da-4a38-4b57-99d5-96d5c436978e}"
-# fix: 将迁移目录直接配置在这里，这是 D1 自动迁移的标准做法
+database_name = "email"
+database_id = "b1fd93da-4a38-4b57-99d5-96d5c436978e"
 migrations_dir = "worker/drizzle"
 
-# 定义环境变量和密钥
+# 定义环境变量和密钥【去掉所有${}，直接填内容】
 [vars]
-EMAIL_DOMAIN = "${mail.lizhuoxuan.dpdns.org}"
-TURNSTILE_KEY = "${}"
-COOKIES_SECRET = "${b1fd93da4a384b5799d596d5c436978e1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d}"
-TURNSTILE_SECRET = "${}"
-PASSWORD = "${5201314Lzx@.}"
-API_RATE_LIMIT_PER_MINUTE = "${60}"
-SHOW_AFF = "${false}"
-ENABLE_OPENAPI = "${false}"
+EMAIL_DOMAIN = "mail.lizhuoxuan.dpdns.org"
+# TURNSTILE_KEY、TURNSTILE_SECRET 空值去${}，后续在CF页面后台填密钥
+TURNSTILE_KEY = ""
+COOKIES_SECRET = "b1fd93da4a384b5799d596d5c436978e1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d"
+TURNSTILE_SECRET = ""
+PASSWORD = "5201314Lzx@."
+API_RATE_LIMIT_PER_MINUTE = "60"
+SHOW_AFF = "false"
+ENABLE_OPENAPI = "false"
 
-# 配置邮件处理
+# 配置邮件定时清理
 [triggers]
-crons = ["0 * * * *"] # 每小时运行一次清理任务
+crons = ["0 * * * *"] # 每小时运行一次
 
 # 构建配置
 [build]
 command = "pnpm run build"
 
-# 静态资源配置
+# 前端静态资源
 [assets]
 binding = "ASSETS"
 directory = "frontend/build/client"
