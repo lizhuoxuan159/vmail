@@ -10,8 +10,8 @@ keep_vars = true
 # 启用 D1数据库【已修复】
 [[d1_databases]]
 binding = "DB"
-database_name = "email"
-database_id = "b1fd93da-4a38-4b57-99d5-96d5c436978e"
+database_name = "email2"
+database_id = "56bab3cc-ba49-4c28-975e-0cdf00224112"
 migrations_dir = "worker/drizzle"
 
 # 定义环境变量和密钥【去掉所有${}，直接填内容】
