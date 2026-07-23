@@ -2,7 +2,7 @@
 
 本项目已包含一个预先配置好的 GitHub Action 工作流文件 (`.github/workflows/deploy.yml`)，可以帮助您自动将 Vmail 应用部署到 Cloudflare Workers。
 
-## 准备工作
+## 准备工作 
 
 在开始之前，请确保您已经完成了 [接收邮件部署教程](/docs/receive-tutorial.md) 中的所有步骤，特别是 Cloudflare 和 Turso 的配置。
 
